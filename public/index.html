@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta y Pago de Facturas</title>
+</head>
+<body>
+    <h1>Consulta y Pago de Facturas</h1>
+    <form action="index.php" method="post">
+        Número de Cédula: <input type="text" name="cedula" required><br>
+        Monto a Pagar: <input type="number" name="monto" step="0.01" required><br>
+        <button type="submit">Pagar</button>
+    </form>
+    <?php if (!empty($mensaje)): ?>
+        <p><?= htmlspecialchars($mensaje) ?></p>
+    <?php endif; ?>
+</body>
+</html>
